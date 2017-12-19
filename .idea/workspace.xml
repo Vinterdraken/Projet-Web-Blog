@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd18476e-5704-465a-95bd-9a0a4d1f9fab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Projet-Web-Blog/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadHome.twig" afterPath="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadHome.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig" afterPath="$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig" afterPath="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig" afterPath="$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/index.php" afterPath="$PROJECT_DIR$/Projet-Web-Blog/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/src/Controllers/ItemsController.php" afterPath="$PROJECT_DIR$/Projet-Web-Blog/src/Controllers/ItemsController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,22 +14,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig">
+      <file leaf-file-name="BodyHome.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyHome.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <state relative-caret-position="275">
+              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig">
+      <file leaf-file-name="JsBootstrapImport.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/JsBootstrapImport.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BodyHeader.Twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/BodyHeader.Twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,34 +50,24 @@
         <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadHome.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3_WebProject/View/head.twig">
+      <file leaf-file-name="StyleSheetHead.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="71" lean-forward="true" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
+            <state relative-caret-position="25">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3_WebProject/View/main.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharsetHead.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/CharsetHead.twig">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/CSS/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -78,11 +76,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyleSheetHead.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig">
+      <file leaf-file-name="Navbar.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/Navbar.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="74" lean-forward="false" selection-start-line="0" selection-start-column="74" selection-end-line="0" selection-end-column="74" />
+              <caret line="0" column="92" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,8 +123,11 @@
         <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig" />
         <option value="$PROJECT_DIR$/../TP3_WebProject/View/headLayout.twig" />
         <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadHome.twig" />
-        <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig" />
+        <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/Navbar.twig" />
+        <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/BodyHeader.Twig" />
         <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig" />
+        <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/JsBootstrapImport.twig" />
+        <option value="$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig" />
       </list>
     </option>
   </component>
@@ -152,58 +175,7 @@
               <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Body" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Head" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Projet-Web-Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Head" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HeadComponent" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP3_WebProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-Web-Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP3_WebProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CSS" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -238,12 +210,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513679451831</updated>
-      <workItem from="1513679460463" duration="1776000" />
+      <workItem from="1513679460463" duration="3484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1776000" />
+    <option name="totallyTimeSpent" value="3484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -303,18 +275,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyHome.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3_WebProject/View/head.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="71" lean-forward="true" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
+          <caret line="3" column="71" lean-forward="false" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -323,14 +287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadHome.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -359,22 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="74" lean-forward="false" selection-start-line="0" selection-start-column="74" selection-end-line="0" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3_WebProject/View/main.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -383,10 +323,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig">
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/Navbar.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <caret line="0" column="92" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/BodyHeader.Twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadHome.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Home.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyHome.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Main.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/JsBootstrapImport.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/CSS/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projet-Web-Blog/View/Head/HeadComponent/StyleSheetHead.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
