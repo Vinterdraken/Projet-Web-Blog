@@ -4,6 +4,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
+// use DUT\Models\Items;
+
 
 $app = new Silex\Application();
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
@@ -22,21 +24,35 @@ $app['em'] = function ($app) {
     return EntityManager::create($app['connection'], $app['doctrine_config']);
 };
 
-$app->get('/persons', function () use ($app) {
-    $entityManager = $app['em'];
-    $repository = $entityManager->getRepository('DUT\\Models\\Person');
+//web/index.php
+$app->register(new Silex\Provider\TwigServiceProvider(), [
+    'twig.path' => __DIR__.'/View',
+]);
+
+
+$app->get('/items', function () use ($app) {
+  return;
 });
 
 /**
  * ROUTES
  */
-$app->get('/', 'DUT\\Controllers\\ItemsController::listAction')
+
+
+
+
+$app->get('/main', 'DUT\\Controllers\\ItemsController::listAction')
     ->bind('home');
 
-$app->get('/create', 'DUT\\Controllers\\ItemsController::createAction');
-$app->post('/create', 'DUT\\Controllers\\ItemsController::createAction');
+$app->post('/create', 'DUT\\Controllers\\ItemsController::insertAction')
+    ->bind('create');
+
 
 $app->get('/remove/{index}', 'DUT\\Controllers\\ItemsController::deleteAction');
+
+
+//web/index.php
+
 
 $app['debug'] = true;
 $app->run();

@@ -1,23 +1,22 @@
-{% extends Home.twig %}
+{% extends "Home.twig" %}
 
-<!-- Import of Head -->
 {% block head %}
     {% include "Head/HeadHome.twig" %}
 
+    {% block title %}
+        {% include "Head/HeadComponent/TitleHead.twig" %}
+    {% endblock %}
 
+    {% block charset %}
+        {% include "Head/HeadComponent/CharsetHead.twig" %}
+    {% endblock %}
 
-
-
-
-
-
-
-
-
+    {% block style %}
+        {% include "Head/HeadComponent/StyleSheetHead.twig" %}
+    {% endblock %}
 
 {% endblock %}
 
-<!-- Import of Body -->
 {% block body %}
     {% include "Body/BodyHome.twig" %}
 
