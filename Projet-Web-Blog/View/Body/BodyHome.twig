@@ -1,13 +1,16 @@
 <body>
-<!-- Including Header Component to the body -->
-{% block header %}{% endblock %}
 
-<!-- Including the main component to the body -->
-{% block bodyCorpse %} {% endblock %}
+<!-- Import Header of the body -->
+{% block header %} {% endblock %}
+<div class="container">
 
-<!-- Including Footer Component to the body -->
-{% block footer %} {% endblock %}
+    <!-- Import main Elements of the body -->
+    {% block bodyCorpse %} {% endblock %}
 
-<!-- Including JavaScript/Ajax/Jquery from bootstrap to the body -->
-{% block jsBootstrapImport %} {% endblock %}
+    <!-- Import Confidentiality of the body -->
+    {% block footer %} {% endblock %}
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="CSS/js/bootstrap.js"> </script>
 </body>

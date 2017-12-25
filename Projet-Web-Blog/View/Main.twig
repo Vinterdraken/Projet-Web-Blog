@@ -22,14 +22,12 @@
     {% include "Body/BodyHome.twig" %}
 
     {% block header %}
-        {% include "Body/BodyComponent/BodyHeader.Twig" %}
+        {% include "Body/BodyComponent/BodyHeader.twig" %}
     {% endblock %}
 
 
-
-
-    {% block jsBootstrapImport %}
-        {% include "Body/BodyComponent/JsBootstrapImport.twig" %}
+    {% block bodyCorpse %}
+        {% include "Body/BodyComponent/BodyCorpse.twig" %}
     {% endblock %}
 
 {% endblock %}

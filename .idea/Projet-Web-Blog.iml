@@ -17,5 +17,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="TP2_ProjetWeb" />
+    <orderEntry type="module" module-name="TestCarousel" />
   </component>
 </module>

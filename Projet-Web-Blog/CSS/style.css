@@ -1,3 +1,10 @@
 body{
-    background-color: darkcyan;
+    background-color: ghostwhite;
+}
+
+.btn-outline-success {
+    color: darkcyan;
+    background-color: transparent;
+    background-image: none;
+    border-color: darkcyan;
 }
