@@ -1870,7 +1870,7 @@ pre code {
   background-color: #fff;
   border-color: #80bdff;
   outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 139, 139, 0.35);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2599,33 +2599,34 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-success {
-  color: #28a745;
+  color: darkcyan;
   background-color: transparent;
   background-image: none;
-  border-color: #28a745;
+  border-color: darkcyan;
 }
 
 .btn-outline-success:hover {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: darkcyan;
+  border-color: darkcyan;
 }
 
 .btn-outline-success:focus, .btn-outline-success.focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  box-shadow: 0 0 0 0.2rem;
+  background-color: darkcyan;
 }
 
 .btn-outline-success.disabled, .btn-outline-success:disabled {
-  color: #28a745;
+  color: darkcyan;
   background-color: transparent;
 }
 
 .btn-outline-success:not([disabled]):not(.disabled):active, .btn-outline-success:not([disabled]):not(.disabled).active,
 .show > .btn-outline-success.dropdown-toggle {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  background-color: darkcyan;
+  border-color: darkcyan;
+  box-shadow: 0 0 0 0.2rem rgba(0, 139, 139, 0.35);;
 }
 
 .btn-outline-info {
