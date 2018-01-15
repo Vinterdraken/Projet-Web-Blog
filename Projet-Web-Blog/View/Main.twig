@@ -1,0 +1,33 @@
+{% extends "Home.twig" %}
+
+{% block head %}
+    {% include "Head/HeadHome.twig" %}
+
+    {% block title %}
+        {% include "Head/HeadComponent/TitleHead.twig" %}
+    {% endblock %}
+
+    {% block charset %}
+        {% include "Head/HeadComponent/CharsetHead.twig" %}
+    {% endblock %}
+
+    {% block style %}
+        {% include "Head/HeadComponent/StyleSheetHead.twig" %}
+    {% endblock %}
+
+{% endblock %}
+
+
+{% block body %}
+    {% include "Body/BodyHome.twig" %}
+
+    {% block header %}
+        {% include "Body/BodyComponent/BodyHeader.twig" %}
+    {% endblock %}
+
+
+    {% block bodyCorpse %}
+        {% include "Body/BodyComponent/BodyCorpse.twig" %}
+    {% endblock %}
+
+{% endblock %}

@@ -2,56 +2,54 @@
 
 namespace DUT\Controllers;
 
+use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Silex\Application;
-use DUT\Services\SessionStorage;
 
 class ItemsController {
 
-    protected $storage;
 
     public function __construct() {
-        $this->storage = new SessionStorage();
+
     }
 
-    public function listAction() {
-        $storage = new SessionStorage();
-        $html = '<h2>Home</h2>';
-        $html .= '<a href="create">Ajouter</a>';
-        $html .= '<ul>';
+    public function listAction(Application $app) {
 
-        foreach ($storage->getElements() as $index => $value) {
-            $html .= '<li>' . $value . ' <a href="remove/' . $index . '">Suppr.</a></li>';
-        }
 
-        $html .= '</li>';
+        /** @var EntityManager $entityManager */
+        //$entityManager = $app['em'];
 
-        return new Response($html);
+        //$repository = $entityManager->getRepository('DUT\\Models\\Items');
+        //$table = $repository->findAll();
+
+        return new Response($app['twig']->render('Main.twig'));
     }
 
-    public function createAction(Request $request, Application $app) {
-        $name = $request->get('name', null);
-        $url = $app['url_generator']->generate('home');
+    public function deleteAction($id ,Application $app) {
 
-        if (!is_null($name)) {
-            $this->storage->addElement($name);
+        /** @var EntityManager $entityManager */
+        //$personToRemove = $entityManager->find('DUT\\Models\\Person,2 ,bonsoir',$id);
 
-            return $app->redirect($url);
-        }
-
-        $html = '<h2>Ajouter</h2><form action="create" method="post">';
-        $html .= '<label for="input">Nom</label><input id="input" type="text" name="name">';
-        $html .= '<button>Valider</button></form>';
-
-        return new Response($html);
-    }
-
-    public function deleteAction($index, Application $app) {
-        $this->storage->removeElement($index);
+        //$entityManager->remove($personToRemove);
+        $entityManager->flush();
 
         $url = $app['url_generator']->generate('home');
 
         return $app->redirect($url);
     }
+   /* public function insertAction(Request $request, Application $app){
+
+
+
+        $entityManager = $app['em'];
+        $name = $request->get('name', null);
+        $itemName = new Items($name);
+
+        $entityManager->persist($itemName);
+        $entityManager->flush();
+
+        $url = $app['url_generator']->generate('home');
+        return $app->redirect($url);
+    }*/
 }
