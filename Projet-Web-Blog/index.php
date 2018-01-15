@@ -20,7 +20,7 @@ $app['doctrine_config'] = Setup::createYAMLMetadataConfiguration([__DIR__ . '/co
 
 $app['em'] = function ($app) {
     return EntityManager::create($app['connection'], $app['doctrine_config']);
-};
+};  
 
 /*
 $app->get('/persons', function () use ($app) {
@@ -48,7 +48,7 @@ $app->post('/create', 'DUT\\Controllers\\PostController::createPost');
 
 $app->get('/edit/{id}', 'DUT\\Controllers\\PostController::editPost')
     ->bind('edit');
-$app->post('/edit/{id}', 'DUT\\Controllers\\PostController::createPost');
+$app->post('/edit/{id}', 'DUT\\Controllers\\PostController::editPost');
 
 $app->get('/remove/{id}', 'DUT\\Controllers\\PostController::removePost')
     ->bind('remove');
@@ -65,14 +65,10 @@ $app->get('/approveComment/{id}', 'DUT\\Controllers\\CommentController::approveC
     ->bind('approveComment');
 
 
-///// Display an article and add Comments for a simple user /////
+///// Display an article & his comments and add Comments for a simple user /////
 $app->get('/post/{id}', 'DUT\\Controllers\\PostController::displayPostBy')
 	->bind('post'); //user
 $app->post('/post/{id}', 'DUT\\Controllers\\PostController::displayPostBy');
-
-//une page admin avec auth qui fait acceder au Ajouter/Modif/Suppr & Moderer les nouveaux commentaire
-
-//si temps gerer les users identifié 
 
 $app['debug'] = true;
 $app->run();

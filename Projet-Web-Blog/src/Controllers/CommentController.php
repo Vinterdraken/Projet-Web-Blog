@@ -11,6 +11,10 @@ class CommentController{
 
 	private $entityManager;
 
+	/**
+	* Cette fonction affiche tout les commentaires d'un article
+	* $postId l'id de l'article concerné
+	*/
 	public function displayAllCommentBy($postId, Request $request, Application $app){
 
 		$entityManager = $app['em'];
@@ -48,6 +52,11 @@ class CommentController{
 		return $html;
 	}
 
+	/**
+	* Cette fonction créé un commentaire dans la base de données
+	* $postId, $author, $content sont des variables qui servent à créer le commentaire
+	* $postByUrl permet la redirection sur la page d'affichage de l'article commenter (cf. fonction displayPostBy)
+	*/
 	public function createComment(Request $request, Application $app, $postId, $author, $content, $postByUrl){
 
 		$entityManager = $app['em'];
@@ -63,31 +72,9 @@ class CommentController{
         return $app->redirect($postByUrl);         
 	}
 	
-	/*
-	public function createComment(Request $request, Application $app){
-
-		$entityManager = $app['em'];
-
-		$author = $request->get('title', null);
-		$date = date("Y-m-d"); //Date actuelle du serveur
-		$content = $request->get('content', null);
-
-        $url = $app['url_generator']->generate('home');
-        $createUrl = $app['url_generator']->generate('create');
-
-        if (!is_null($title) && !is_null($content)) {
-
-            $post = new Post($title, $date, $content);
-            
-            $entityManager->persist($post);
-            $entityManager->flush();
-
-            return $app->redirect($url);
-        }
-
-        return new Response($html);
-	}*/
-
+	/**
+	* Cette fonction affiche tout les commentaires non vérifés et permet à l'admin de supprimer ou approuver le commentaire
+	*/
 	public function displayCommentForModeration(Application $app){
 
 		$entityManager = $app['em'];
@@ -122,6 +109,10 @@ class CommentController{
 		return new Response($html);
 	}
 
+	/**
+	* Cette fonction permet d'approuver un commentaire 
+	* $id l'id du commentaire
+	*/
 	public function approveComment($id, Application $app){
 
 		$entityManager = $app['em'];
@@ -139,6 +130,10 @@ class CommentController{
         return $app->redirect($url);
 	}
 
+	/**
+	* Cette fonction permet de supprimer un commentaire 
+	* $id l'id du commentaire
+	*/
 	public function deleteComment($id, Application $app){
 
 		$entityManager = $app['em'];
@@ -154,7 +149,29 @@ class CommentController{
         return $app->redirect($url);
 	}
 
+	/**
+	* Cette fonction permet de supprimer les commentaires d'un article, notament quand l'article est supprimer
+	* $postId l'id de l'article supprimer
+	*/
+	public function deleteAGroupOfComment($postId, Application $app){
 
+		$entityManager = $app['em'];
+		$repository = $entityManager->getRepository('DUT\\Models\\Comment');
+
+		$groupOfComments = $repository->findAll();		
+
+		$url = $app['url_generator']->generate('adminHome');
+
+		foreach ($groupOfComments as $comment) {
+
+			if ($comment->getPostId() == $postId) {
+		            $entityManager->remove($comment);
+		            $entityManager->flush();
+			}
+		}
+
+        return $app->redirect($url);
+	}
 
 }
 
