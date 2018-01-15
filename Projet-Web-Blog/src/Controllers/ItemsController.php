@@ -26,6 +26,18 @@ class ItemsController {
         return new Response($app['twig']->render('Main.twig'));
     }
 
+    public function adminAction(Application $app) {
+
+
+        /** @var EntityManager $entityManager */
+        //$entityManager = $app['em'];
+
+        //$repository = $entityManager->getRepository('DUT\\Models\\Items');
+        //$table = $repository->findAll();
+
+        return new Response($app['twig']->render('Admin.twig'));
+    }
+
     public function deleteAction($id ,Application $app) {
 
         /** @var EntityManager $entityManager */
