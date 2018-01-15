@@ -2,9 +2,31 @@ body{
     background-color: ghostwhite;
 }
 
-.btn-outline-success {
-    color: darkcyan;
-    background-color: transparent;
-    background-image: none;
-    border-color: darkcyan;
+
+#navBarBrand{
+    text-decoration: none;
+    font-family: 'Leckerli One', cursive;
+    color: #8E7A68;
+    margin-top: -5px;
+    font-size: 24px;
+}
+
+p{
+    text-align: justify;
+}
+
+.navbar{
+    font-size: 24px;
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    margin-right: 50px;
+    background-color: transparent
+}
+
+.navbar-light .navbar-nav .nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar-nav {
+    margin-left: 20px;
 }
