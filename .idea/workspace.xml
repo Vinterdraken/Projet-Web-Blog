@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd18476e-5704-465a-95bd-9a0a4d1f9fab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Projet-Web-Blog.iml" afterPath="$PROJECT_DIR$/.idea/Projet-Web-Blog.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/CSS/style.css" afterPath="$PROJECT_DIR$/Projet-Web-Blog/CSS/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/BodyCorpse.twig" afterPath="$PROJECT_DIR$/Projet-Web-Blog/View/Body/BodyComponent/BodyCorpse.twig" />
@@ -251,12 +253,12 @@
       <workItem from="1515163185603" duration="580000" />
       <workItem from="1515351065526" duration="207000" />
       <workItem from="1515408954275" duration="82000" />
-      <workItem from="1516003195920" duration="18385000" />
+      <workItem from="1516003195920" duration="18625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32894000" />
+    <option name="totallyTimeSpent" value="33134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
