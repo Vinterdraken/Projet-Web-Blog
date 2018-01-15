@@ -38,10 +38,11 @@ $app->get('/items', function () use ($app) {
  * ROUTES
  */
 
+$app->get('/admin', 'DUT\\Controllers\\ItemsController::adminAction')
+    ->bind('home');
 
 
-
-$app->get('/main', 'DUT\\Controllers\\ItemsController::listAction')
+$app->get('/main', 'DUT\\Controllers\\ItemsController::adminAction')
     ->bind('home');
 
 $app->post('/create', 'DUT\\Controllers\\ItemsController::insertAction')
