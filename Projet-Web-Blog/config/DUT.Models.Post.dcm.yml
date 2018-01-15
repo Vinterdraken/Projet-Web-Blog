@@ -1,0 +1,23 @@
+DUT\Models\Post:
+  type: entity
+  table: Post
+
+  id:
+    Post_id:
+      type: integer
+      generator:
+        strategy: auto
+
+  fields:
+    Post_title:
+      type: string
+      column: Post_titre
+      nullable: false
+    Post_date:
+      type: string
+      column: Post_date
+      nullable: false
+    Post_content:
+      type: string
+      column: Post_content
+      nullable: false
