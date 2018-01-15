@@ -2,7 +2,9 @@ body{
     background-color: ghostwhite;
 }
 
-
+sub{
+    font-style: italic;
+}
 #navBarBrand{
     text-decoration: none;
     font-family: 'Leckerli One', cursive;
@@ -11,14 +13,9 @@ body{
     font-size: 24px;
 }
 
-p{
-    text-align: justify;
-}
-
 .navbar{
     font-size: 24px;
     font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    margin-right: 50px;
     background-color: transparent
 }
 
@@ -28,5 +25,38 @@ p{
 }
 
 .navbar-nav {
-    margin-left: 20px;
+}
+
+
+
+/* Class CSS BLOG */
+
+.archive {
+    box-shadow: 0 0 0 4px #8E7A68, 0 0 0 5px #ffe007d6;
+}
+
+.archive-title {
+    margin: 10px 10px 35px 10px;
+    font-size: 36px;
+    color: #8E7A68;
+    text-align: center;
+    font-family: 'Podkova', serif;
+    padding-top: 20px;
+}
+
+.archive-content{
+    margin: 10px 10px 10px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.archive-text{
+
+    text-align: justify;
+}
+
+.archive-quote{
+    text-align: end;
 }
