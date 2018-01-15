@@ -1,0 +1,31 @@
+DUT\Models\Comment:
+  type: entity
+  table: Comment
+
+  id:
+    Comment_id:
+      type: integer
+      generator:
+        strategy: auto
+
+  fields:
+    Comment_post_id:
+      type: string
+      column: Post_id
+      nullable: false
+    Comment_author:
+      type: string
+      column: Comment_author
+      nullable: false
+    Comment_date:
+      type: string
+      column: Comment_date
+      nullable: false
+    Comment_content:
+      type: string
+      column: Comment_content
+      nullable: false
+    Comment_verified:
+      type: string
+      column: Verified
+      nullable: false
