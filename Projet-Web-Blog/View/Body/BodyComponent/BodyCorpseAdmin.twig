@@ -4,47 +4,41 @@
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="container col-lg-6">
-                    <div class="archive">
-                        <div class="archive-title">Article Template</div>
-                        <article class="archive-content">
-                            <p class="archive-text">Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text
-                                Du text beaucoup de text beaucoup beaucoup beaucoup de text</p>
-                            <sub class="archive-quote">Ecrits par Martin</sub>
-                            <div class="dropdown-divider"></div>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <button class="btn">Ajouter</button>
-                                    <button class="btn">Modifier</button>
-                                    <a href="#" style="color: red;">Supprimer</a>
+                    <ul>
+                        {% for article in articles %}
+                            <li>
+                                <div class="archive">
+                                    <div class="archive-title">{{ article.getTitle() }}</div>
+                                    <article class="archive-content">
+                                        <p class="archive-text">
+                                            {{ article.getContent() }}
+                                        </p>
+                                        <sub class="archive-quote">{{ article.getDate() }}</sub>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <button class="btn">Ajouter</button>
+                                                <button href="{{  }}" class="btn">Modifier</button>
+                                                <a href="#" style="color: red;">Supprimer</a>
+                                            </div>
+                                            <div class="col-lg-1" id="likeCounterIcon">
+                                                <span class="oi oi-heart"></span>
+                                            </div>
+                                            <div class="col-lg-1" id="likeCounterIconText">
+                                                <p>50</p>
+                                            </div>
+                                            <div class="col-lg-1" id="likeCounterIcon">
+                                                <span class="oi oi-envelope-closed"></span>
+                                            </div>
+                                            <div class="col-lg-1" id="likeCounterIconText">
+                                                <p>7</p>
+                                            </div>
+                                        </div>
+                                    </article>
                                 </div>
-                                <div class="col-lg-1" id="likeCounterIcon">
-                                    <span class="oi oi-heart"></span>
-                                </div>
-                                <div class="col-lg-1" id="likeCounterIconText">
-                                    <p>50</p>
-                                </div>
-                                <div class="col-lg-1" id="likeCounterIcon">
-                                    <span class="oi oi-envelope-closed"></span>
-                                </div>
-                                <div class="col-lg-1" id="likeCounterIconText">
-                                    <p>7</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="col-lg-3"></div>
             </div>

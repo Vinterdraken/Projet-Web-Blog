@@ -37,7 +37,7 @@ span{
     border: transparent;
 }
 
-/* Class CSS BLOG */
+/* Class archive CSS BLOG */
 
 .archive {
     box-shadow: 0 0 0 4px #8E7A68, 0 0 0 5px #ffe007d6;
@@ -76,4 +76,22 @@ span{
 
 #likeCounterIcon{
     margin-top:9px;
+}
+
+/* Class Comment on Blog */
+
+.comment-author{
+
+}
+
+.comment-content{
+
+}
+
+.comment-group{
+
+}
+
+.comment-title{
+
 }
