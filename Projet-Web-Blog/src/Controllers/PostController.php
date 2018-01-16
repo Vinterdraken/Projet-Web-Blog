@@ -23,11 +23,11 @@ class PostController{
 
 		$addPostUrl = $app['url_generator']->generate('create');				
 
-		$html = '<h2>Affichage de tout les articles</h2>';
+		//$html = '<h2>Affichage de tout les articles</h2>';
 
 		$posts = $repository->findAll();
 
-		foreach ($posts as $post ) {
+		/*foreach ($posts as $post ) {
 
 			$editPostUrl = $app['url_generator']->generate('edit', ['id' => $post->getId()] );
 			$removePostUrl = $app['url_generator']->generate('remove', ['id' => $post->getId()] );
@@ -37,9 +37,9 @@ class PostController{
 			$html .= '<h5> Dernière modification le '. $post->getDate() .'</h5>';
 			$html .= '<p>'. $post->getContent() .'</p>';
 
-		}
+		}*/
 
-		return new Response($html);
+        return new Response($app['twig']->render('Main.twig', ['articles' => $posts]));
 	}
 
 	/**

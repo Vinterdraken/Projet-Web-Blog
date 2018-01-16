@@ -10,7 +10,7 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app['connection'] = [
     'driver' => 'pdo_mysql',
-    'host' => 'localhost',
+    'host' => 'iutbg-lamp.univ-lyon1.fr',
     'user' => 'p1602259',
     'password' => '11602259',
     'dbname' => 'p1602259'
@@ -28,6 +28,9 @@ $app->get('/persons', function () use ($app) {
     $repository = $entityManager->getRepository('DUT\\Models\\Person');
 });*/
 
+$app->register(new Silex\Provider\TwigServiceProvider(), [
+    'twig.path' => __DIR__.'/View',
+]);
 
 /**
  * ROUTES
