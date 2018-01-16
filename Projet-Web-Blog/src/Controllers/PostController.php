@@ -21,7 +21,7 @@ class PostController{
 		$entityManager = $app['em'];
 		$repository = $entityManager->getRepository('DUT\\Models\\Post');
 
-		$addPostUrl = $app['url_generator']->generate('create');				
+		//$addPostUrl = $app['url_generator']->generate('create');
 
 <<<<<<< HEAD
 		$html = '<h2>Affichage de tout les articles</h2>';
@@ -64,7 +64,7 @@ class PostController{
 
 		$entityManager = $app['em'];
 		$repository = $entityManager->getRepository('DUT\\Models\\Post');
-
+/*
 		$addPostUrl = $app['url_generator']->generate('create');				
 		$moderateCommentUrl = $app['url_generator']->generate('moderateComment');
 
@@ -72,10 +72,10 @@ class PostController{
 
 		$html .= '<br><a href="'. $moderateCommentUrl .'"> Moderer les commentaires </a>';
 		$html .= '<br><br><a href="' . $addPostUrl . '">Ajouter un article</a>';
-
+*/
 		$posts = $repository->findAll();
 
-		foreach ($posts as $post ) {
+		/*foreach ($posts as $post ) {
 
 			$editPostUrl = $app['url_generator']->generate('edit', ['id' => $post->getId()] );
 			$removePostUrl = $app['url_generator']->generate('remove', ['id' => $post->getId()] );
@@ -89,8 +89,8 @@ class PostController{
 			$html .= '<a href="' . $editPostUrl . '">Editer</a>';
 
 		}
-
-		return new Response($html);
+        */
+        return new Response($app['twig']->render('Admin.twig', ['articles' => $posts]));
 	}
 
 	/**
