@@ -10,11 +10,7 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app['connection'] = [
     'driver' => 'pdo_mysql',
-<<<<<<< HEAD
-    'host' => 'localhost',
-=======
     'host' => 'iutbg-lamp.univ-lyon1.fr',
->>>>>>> d6fc816a83db28c7b4e0f9f28d9fce046b5ba42a
     'user' => 'p1602259',
     'password' => '11602259',
     'dbname' => 'p1602259'
@@ -24,17 +20,7 @@ $app['doctrine_config'] = Setup::createYAMLMetadataConfiguration([__DIR__ . '/co
 
 $app['em'] = function ($app) {
     return EntityManager::create($app['connection'], $app['doctrine_config']);
-};  
-<<<<<<< HEAD
-
-/*
-$app->get('/persons', function () use ($app) {
-    $entityManager = $app['em'];
-    $repository = $entityManager->getRepository('DUT\\Models\\Person');
-});*/
-
-
-=======
+};
 
 /*
 $app->get('/persons', function () use ($app) {
@@ -46,7 +32,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__.'/View',
 ]);
 
->>>>>>> d6fc816a83db28c7b4e0f9f28d9fce046b5ba42a
 /**
  * ROUTES
  */
@@ -85,12 +70,8 @@ $app->get('/approveComment/{id}', 'DUT\\Controllers\\CommentController::approveC
 
 ///// Display an article & his comments and add Comments for a simple user /////
 $app->get('/post/{id}', 'DUT\\Controllers\\PostController::displayPostBy')
-<<<<<<< HEAD
     ->bind('post'); //user
-=======
-	->bind('post'); //user
->>>>>>> d6fc816a83db28c7b4e0f9f28d9fce046b5ba42a
-$app->post('/post/{id}', 'DUT\\Controllers\\PostController::displayPostBy');
+
 
 $app['debug'] = true;
 $app->run();

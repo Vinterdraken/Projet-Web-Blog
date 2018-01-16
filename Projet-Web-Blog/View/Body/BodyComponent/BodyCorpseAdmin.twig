@@ -17,8 +17,9 @@
                                         <div class="dropdown-divider"></div>
                                         <div class="row">
                                             <div class="col-lg-8">
-                                                <button class="btn">Ajouter</button>
-                                                <button class="btn"><a href="path('edit', {'id': id }) }}">Modifier</a></button>
+                                                <button class="btn">
+                                                    <a href="{{ app.url_generator.generate("edit",{'id' : article.getId()}) }}" style="color: #8E7A68;">Modifier</a>
+                                                </button>
                                                 <a href="#" style="color: red;">Supprimer</a>
                                             </div>
                                             <div class="col-lg-1" id="likeCounterIcon">

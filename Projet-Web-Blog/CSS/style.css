@@ -10,12 +10,18 @@ span{
     font-family: 'Leckerli One', cursive;
 }
 
+li {
+    list-style-type: none;
+}
 #navBarBrand{
     text-decoration: none;
     font-family: 'Leckerli One', cursive;
     color: #8E7A68;
     margin-top: -5px;
     font-size: 24px;
+}
+a:link, a:visited{
+    text-decoration: none;
 }
 
 .navbar{
@@ -41,6 +47,7 @@ span{
 
 .archive {
     box-shadow: 0 0 0 4px #8E7A68, 0 0 0 5px #ffe007d6;
+    margin-top: 20px;
 }
 
 .archive-title {

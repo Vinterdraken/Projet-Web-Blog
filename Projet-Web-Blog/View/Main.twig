@@ -21,12 +21,14 @@
 {% block body %}
     {% include "Body/BodyHome.twig" %}
 
-    {% block header %}
-        {% include "Body/BodyComponent/BodyHeader.twig" %}
-    {% endblock %}
+
 
     {% block navbBar %}
         {% include "Body/BodyComponent/Navbar.twig" %}
+    {% endblock %}
+
+    {% block header %}
+        {% include "Body/BodyComponent/BodyHeader.twig" %}
     {% endblock %}
 
     {% block bodyCorpse %}
