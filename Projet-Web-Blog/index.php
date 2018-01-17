@@ -71,7 +71,7 @@ $app->get('/approveComment/{id}', 'DUT\\Controllers\\CommentController::approveC
 ///// Display an article & his comments and add Comments for a simple user /////
 $app->get('/post/{id}', 'DUT\\Controllers\\PostController::displayPostBy')
     ->bind('post'); //user
-
+$app->post('/post/{id}', 'DUT\\Controllers\\PostController::displayPostBy');
 
 $app['debug'] = true;
 $app->run();

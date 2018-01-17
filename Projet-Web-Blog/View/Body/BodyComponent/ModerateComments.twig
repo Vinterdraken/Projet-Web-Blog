@@ -1,0 +1,21 @@
+<div class="container archive">
+    <ul>
+        {% for comment in comments %}
+            {% if comment.getVerification() == 'false' %}
+                <li>
+                    <p>Commenté le <b> {{ comment.getDate() }}</b> par <b>{{ comment.getAuthor() }}
+                        </b> concernant l'article n° <b>{{ comment.getPostId() }}</b></p>
+                    <label for="input">Commentaire: {{ comment.getContent() }}</label> <br/>
+
+                    <a href="{{ app.url_generator.generate("approveComment",{'id' :comment.getId() }) }}">Approuver</a><br>
+                    <a href="{{ app.url_generator.generate("deleteComment",{'id' :comment.getId() }) }}">Supprimer</a><br>
+
+                    <div class="dropdown-divider"></div>
+
+                </li>
+
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <a href="{{ app.url_generator.generate("adminHome") }}">Retour à la page d'accueil</a>
+</div>

@@ -1,20 +1,25 @@
 <div class="container">
     <div class="editArticle">
-        <form id="form-comment" action=" {{ editionUrl }} " method="post">
+        <h4 class="h4" style="">Modification de l'article # {{ id }}</h4>
+
+        <div class="dropdown-divider"></div>
+
+        <form id="form-content" action=" {{ editionUrl }} " method="post">
             <div class="form-group">
                 <label for="FormControlInput1">TITLE</label>
-                <textarea type="text" class="form-control" id="FormControlInput1" rows="1" name="title"></textarea>
+                <textarea type="text" class="form-control" id="FormControlInput1" rows="1" name="title">{{ title }}</textarea>
             </div>
 
             <div class="dropdown-divider"></div>
 
             <div class="form-group">
                 <label for="FormControlTextarea1">CONTENT</label>
-                <textarea class="form-control" id="FormControlTextarea1" rows="5" name="content"></textarea>
+                <textarea class="form-control" id="FormControlTextarea1" rows="5" name="content">{{ content }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn" type="submit">Valider</button>
             </div>
         </form>
     </div>
+
 </div>

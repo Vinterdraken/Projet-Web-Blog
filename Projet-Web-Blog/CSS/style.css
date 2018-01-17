@@ -13,6 +13,11 @@ span{
 li {
     list-style-type: none;
 }
+
+ul{
+    list-style-type: none;
+}
+
 #navBarBrand{
     text-decoration: none;
     font-family: 'Leckerli One', cursive;
@@ -30,17 +35,19 @@ a:link, a:visited{
     background-color: transparent
 }
 
+
 .navbar-light .navbar-nav .nav-link{
     margin-right: 10px;
     margin-left: 10px;
 }
 
-.navbar-nav {
-}
-
 .btn{
     box-shadow: transparent;
     border: transparent;
+}
+
+label{
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Class archive CSS BLOG */
@@ -85,20 +92,50 @@ a:link, a:visited{
     margin-top:9px;
 }
 
+.editArticle{
+    margin: 20px 20px 20px 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+
+#form-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+.form-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
 /* Class Comment on Blog */
 
 .comment-author{
-
+    margin: 10px 10px 10px 0;
+    font-size: 24px;
+    color: #8E7A68;
+    text-align: left;
+    font-family: 'Podkova', serif;
+    padding-top: 20px;
 }
 
 .comment-content{
-
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
 }
 
 .comment-group{
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.comment-title{
-
+.comment{
+    font-family: 'Leckerli One', cursive;
 }
+

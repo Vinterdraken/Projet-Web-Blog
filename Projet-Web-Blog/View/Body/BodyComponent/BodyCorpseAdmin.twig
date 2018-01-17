@@ -4,23 +4,43 @@
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="container col-lg-6">
+                    <div class="row">
+
+                        <div class="col-lg-1"></div>
+
+                        <Button class="btn col-lg-5">
+                            <a href="{{ app.url_generator.generate("create") }}" style="color: #8E7A68;">Ajouter un article</a>
+                        </Button>
+
+                        <div class="col-lg-1"></div>
+
+                        <Button class="btn col-lg-5">
+                            <a href="{{ app.url_generator.generate("moderateComment") }}" style="color: #8E7A68;">Modérer les commentaires</a>
+                        </Button>
+                    </div>
+
                     <ul>
                         {% for article in articles %}
                             <li>
                                 <div class="archive">
-                                    <div class="archive-title">{{ article.getTitle() }}</div>
+                                    <div class="archive-title"> <a id="" href="{{ app.url_generator.generate("post",
+                                        {'id' :article.getId() }) }}" style="color: #8E7A68;">{{ article.getTitle() }}
+                                        </a></div>
                                     <article class="archive-content">
+
                                         <p class="archive-text">
                                             {{ article.getContent() }}
                                         </p>
+
                                         <sub class="archive-quote">{{ article.getDate() }}</sub>
+
                                         <div class="dropdown-divider"></div>
                                         <div class="row">
                                             <div class="col-lg-8">
                                                 <button class="btn">
                                                     <a href="{{ app.url_generator.generate("edit",{'id' : article.getId()}) }}" style="color: #8E7A68;">Modifier</a>
                                                 </button>
-                                                <a href="#" style="color: red;">Supprimer</a>
+                                                <a href="{{ app.url_generator.generate("remove",{'id' : article.getId()}) }}" style="color: red;">Supprimer</a>
                                             </div>
                                             <div class="col-lg-1" id="likeCounterIcon">
                                                 <span class="oi oi-heart"></span>

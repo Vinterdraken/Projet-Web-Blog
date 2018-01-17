@@ -10,6 +10,7 @@
 		private $Comment_date;
 		private $Comment_content;
 		private $Comment_verified;
+		private $Comment_number;
 
 		public function __construct($post_id, $author, $date, $content){
 			$this->Comment_post_id = $post_id;
@@ -17,6 +18,7 @@
 			$this->Comment_date = $date;
 			$this->Comment_content = $content;
 			$this->Comment_verified = "false";
+
 		}
 
 		public function getid() { return $this->Comment_id; }
@@ -25,8 +27,8 @@
 		public function getDate(){ return $this->Comment_date; }
 		public function getContent(){ return $this->Comment_content; }
 		public function getVerification(){ return $this->Comment_verified; }
-
 		public function setVerification($value){ $this->Comment_verified = $value; }
+		public function getCommentNumber(){ return $this->Comment_number; }
 
 	}
 

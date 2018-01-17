@@ -8,7 +8,9 @@
                         {% for article in articles %}
                             <li>
                                 <div class="archive">
-                                    <div class="archive-title">{{ article.getTitle() }}</div>
+                                    <div class="archive-title"> <a href="{{ app.url_generator.generate("post",
+                                        {'id' :article.getId() }) }}" style="color: #8E7A68;">{{ article.getTitle() }}
+                                        </a></div>
                                     <article class="archive-content">
                                         <p class="archive-text">
                                             {{ article.getContent() }}
@@ -25,7 +27,8 @@
                                                 <p>50</p>
                                             </div>
                                             <div class="col-lg-1" id="likeCounterIcon">
-                                                <span class="oi oi-envelope-closed"></span>
+                                                <a href="{{ app.url_generator.generate("post",
+                                                {'id' :article.getId() }) }}"><span class="oi oi-envelope-closed"></span></a>
                                             </div>
                                             <div class="col-lg-1" id="likeCounterIconText">
                                                 <p>7</p>

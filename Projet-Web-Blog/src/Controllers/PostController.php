@@ -20,22 +20,12 @@ class PostController{
 
 		$entityManager = $app['em'];
 		$repository = $entityManager->getRepository('DUT\\Models\\Post');
-
-		//$addPostUrl = $app['url_generator']->generate('create');
+		$comment = $entityManager->getRepository('DUT\\Models\\Comment');
 
 		$posts = $repository->findAll();
 
-		/*foreach ($posts as $post ) {
 
-			$editPostUrl = $app['url_generator']->generate('edit', ['id' => $post->getId()] );
-			$removePostUrl = $app['url_generator']->generate('remove', ['id' => $post->getId()] );
-			$displayPostByUrl = $app['url_generator']->generate('post', ['id' => $post->getId()] );
 
-			$html .= '<h3><a href="'. $displayPostByUrl .'">'.  $post->getTitle() .'</a></h3>';
-			$html .= '<h5> Dernière modification le '. $post->getDate() .'</h5>';
-			$html .= '<p>'. $post->getContent() .'</p>';
-
-		}*/
 
         return new Response($app['twig']->render('Main.twig', ['articles' => $posts]));
 	}
@@ -87,16 +77,17 @@ class PostController{
 		$repository = $entityManager->getRepository('DUT\\Models\\Post');
 
 		$post = $repository->find($id);
-		
+		/*
 		$html = '<h2>Affichage de l\'article #'. $id .'</h2>';
 		$html .= '<h3>#'. $post->getId() .' '. $post->getTitle() .'</h3>';
 		$html .= '<h5>Dernière modification le '. $post->getDate() .'</h5>';
 		$html .= '<p>'. $post->getContent() .'</p>';
+        */
 
 		$commentController = new CommentController();
-		$html .= $commentController->displayAllCommentBy($id, $request, $app);
+		$comment = $commentController->displayAllCommentBy($id, $post, $request, $app);
 
-		return new Response($html);
+        return $comment;
 	}
 
 	/**
@@ -123,13 +114,13 @@ class PostController{
 
             return $app->redirect($url);
         }
-
+        /*
         $html = '<h2>Ajouter un article</h2><form action="' . $createUrl . '" method="post">';
         $html .= '<label for="input">Titre de l\'article</label><textarea id="input_title" name="title"></textarea><br>';
         $html .= '<label for="input">Contenu de l\'article</label><textarea id="input_content" name="content"></textarea><br>';
         $html .= '<button>Valider</button></form>';
-
-        return new Response($html);
+        */
+        return new Response($app['twig']->render('NewArticle.twig', ['editionUrl' => $createUrl ]));
 	}
 
 	/**
@@ -151,7 +142,7 @@ class PostController{
             $commentController->deleteAGroupOfComment($id, $app);
         }
 
-        return $app->redirect($url);
+        return new Response($app['twig']->render('Admin.twig',['articles' => $post]));
 	}
 
 	/**
@@ -181,15 +172,16 @@ class PostController{
 
             return $app->redirect($adminHomeUrl);
         }
-
+/*
 		$html = '<h2>Modification de l\'article #'. $id .'</h2>';
 
 		$html .= '<form action="' . $editionUrl . '" method="post">';
         $html .= '<label for="input">Titre de l\'article</label><textarea id="input_title" name="title">'. $post->getTitle() .'</textarea><br>';
         $html .= '<label for="input">Contenu de l\'article</label><textarea id="input_content" name="content">'. $post->getContent() .'</textarea><br>';
         $html .= '<button>Valider</button></form>';
-
-        return new Response($html);
+*/
+        return new Response($app['twig']->render('Form.twig', ['editionUrl' => $editionUrl , 'title' => $post->getTitle(),
+            'content' => $post->getContent(), 'id' => $id]));
 	}
 
 

@@ -15,7 +15,7 @@ class CommentController{
 	* Cette fonction affiche tout les commentaires d'un article
 	* $postId l'id de l'article concerné
 	*/
-	public function displayAllCommentBy($postId, Request $request, Application $app){
+	public function displayAllCommentBy($postId, $post, Request $request, Application $app){
 
 		$entityManager = $app['em'];
 		$repository = $entityManager->getRepository('DUT\\Models\\Comment');
@@ -34,6 +34,9 @@ class CommentController{
 			}
 		}
 
+
+
+
 		$author = $request->get('author', null);	
 		$content = $request->get('content', null);
 
@@ -43,13 +46,17 @@ class CommentController{
 			$this->createComment($request, $app, $postId, $author, $content, $postByUrl);
 		}
 
+        /*
 		$html .= '<br><h2>Ajouter un Commentaire</h2><form action="' . $postByUrl . '" method="post">';
         $html .= '<label for="input">Nom/Pseudo</label><textarea id="input_title" name="author"></textarea><br>';
         $html .= '<label for="input">Commentaire</label><textarea id="input_content" name="content"></textarea><br>';
         $html .= '<button>Valider</button></form>';
+        */
 
-		
-		return $html;
+
+        return new Response($app['twig']->render('CommentsArticleAdmin.twig', ['id' => $post->getId(),'title' => $post->getTitle(),
+            'date' => $post->getDate(),'content' => $post->getContent(),'comments' => $comments, 'postByUrl' => $postByUrl,
+            'author' => $author, 'contentComment' => $content]));
 	}
 
 	/**
@@ -60,8 +67,6 @@ class CommentController{
 	public function createComment(Request $request, Application $app, $postId, $author, $content, $postByUrl){
 
 		$entityManager = $app['em'];
-
-		$html = "";
 
 		$date = date("Y-m-d"); //Date actuelle du serveur	
         $comment = new Comment($postId, $author, $date, $content);
@@ -82,11 +87,11 @@ class CommentController{
 
 		$comments = $repository->findAll();
 		
-		$html = "<br>";
+		//$html = "<br>";
 
 		$returnHomeUrl = $app['url_generator']->generate('adminHome');
 
-		foreach ($comments as $comment) {
+		/*foreach ($comments as $comment) {
 			
 			if($comment->getVerification() == "false"){
 
@@ -103,10 +108,11 @@ class CommentController{
 				
 			}
 		}
+		*/
 
-		$html .= '<br><a href="'. $returnHomeUrl .'">Retour à la page d\'accueil</a>';
+		//$html .= '<br><a href="'. $returnHomeUrl .'">Retour à la page d\'accueil</a>';
 
-		return new Response($html);
+        return new Response($app['twig']->render('ModerateCommentsAdmin.twig', ['comments' => $comments]));
 	}
 
 	/**
@@ -173,6 +179,22 @@ class CommentController{
         return $app->redirect($url);
 	}
 
+	public function getCommentNumber(Application $app){
+
+        $entityManager = $app['em'];
+
+        $repository = $entityManager->getRepository('DUT\\Models\\Comment');
+
+        $comment = $repository->findAll();
+
+        $counter = 0;
+
+        foreach ($comment as $comments){
+            $counter++;
+        }
+
+        return $counter;
+    }
 }
 
 ?>
