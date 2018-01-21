@@ -1,3 +1,6 @@
+/* Native HTML tag */
+
+
 body{
     background-color: ghostwhite;
 }
@@ -17,6 +20,9 @@ li {
 ul{
     list-style-type: none;
 }
+
+
+/* Bootstrap Css Change */
 
 #navBarBrand{
     text-decoration: none;
@@ -97,6 +103,9 @@ label{
     padding-top: 20px;
     padding-bottom:20px;
 }
+
+
+/* Form Class */
 
 
 #form-content{

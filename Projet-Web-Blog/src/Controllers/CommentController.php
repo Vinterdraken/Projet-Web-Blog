@@ -34,9 +34,6 @@ class CommentController{
 			}
 		}
 
-
-
-
 		$author = $request->get('author', null);	
 		$content = $request->get('content', null);
 
@@ -45,14 +42,6 @@ class CommentController{
  		if (!is_null($author) && !is_null($content)) {
 			$this->createComment($request, $app, $postId, $author, $content, $postByUrl);
 		}
-
-        /*
-		$html .= '<br><h2>Ajouter un Commentaire</h2><form action="' . $postByUrl . '" method="post">';
-        $html .= '<label for="input">Nom/Pseudo</label><textarea id="input_title" name="author"></textarea><br>';
-        $html .= '<label for="input">Commentaire</label><textarea id="input_content" name="content"></textarea><br>';
-        $html .= '<button>Valider</button></form>';
-        */
-
 
         return new Response($app['twig']->render('CommentsArticleAdmin.twig', ['id' => $post->getId(),'title' => $post->getTitle(),
             'date' => $post->getDate(),'content' => $post->getContent(),'comments' => $comments, 'postByUrl' => $postByUrl,
@@ -86,31 +75,8 @@ class CommentController{
 		$repository = $entityManager->getRepository('DUT\\Models\\Comment');
 
 		$comments = $repository->findAll();
-		
-		//$html = "<br>";
 
 		$returnHomeUrl = $app['url_generator']->generate('adminHome');
-
-		/*foreach ($comments as $comment) {
-			
-			if($comment->getVerification() == "false"){
-
-				$deleteCommentUrl = $app['url_generator']->generate('deleteComment', ['id' => $comment->getId()] );
-				$approveCommentUrl = $app['url_generator']->generate('approveComment', ['id' => $comment->getId()] );
-				
-				
-				$html .= '<p> Commenté le <b>'. $comment->getDate() .'</b> par <b>'. $comment->getAuthor() .'</b> concernant l\'article n° <b>'. $comment->getPostId() .'</b></p>';
-				$html .= '<label for="input">Commentaire: </label><textarea id="input_content" name="content">'. $comment->getContent() .'</textarea><br>';
-				//$html .= '<p>'. $comment->getContent() .'</p>';
-
-				$html .= '<a href="'. $approveCommentUrl .'">Approuver</a><br>';
-				$html .= '<a href="'. $deleteCommentUrl .'">Supprimer</a><br>';		
-				
-			}
-		}
-		*/
-
-		//$html .= '<br><a href="'. $returnHomeUrl .'">Retour à la page d\'accueil</a>';
 
         return new Response($app['twig']->render('ModerateCommentsAdmin.twig', ['comments' => $comments]));
 	}
@@ -178,23 +144,5 @@ class CommentController{
 
         return $app->redirect($url);
 	}
-
-	public function getCommentNumber(Application $app){
-
-        $entityManager = $app['em'];
-
-        $repository = $entityManager->getRepository('DUT\\Models\\Comment');
-
-        $comment = $repository->findAll();
-
-        $counter = 0;
-
-        foreach ($comment as $comments){
-            $counter++;
-        }
-
-        return $counter;
-    }
 }
-
 ?>

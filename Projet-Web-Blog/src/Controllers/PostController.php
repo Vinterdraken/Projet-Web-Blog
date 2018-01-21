@@ -5,7 +5,6 @@ namespace DUT\Controllers;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Silex\Application;
-use DUT\Controllers\CommentController;
 use DUT\Models\Post;
 
 class PostController{
@@ -24,11 +23,9 @@ class PostController{
 
 		$posts = $repository->findAll();
 
-
-
-
         return new Response($app['twig']->render('Main.twig', ['articles' => $posts]));
 	}
+
 
 	/**
 	* Cette fonction est la même que la précédente avec quelques ajout pour l'ADMIN
@@ -38,32 +35,8 @@ class PostController{
 
 		$entityManager = $app['em'];
 		$repository = $entityManager->getRepository('DUT\\Models\\Post');
-/*
-		$addPostUrl = $app['url_generator']->generate('create');				
-		$moderateCommentUrl = $app['url_generator']->generate('moderateComment');
-
-		$html = '<h2>Affichage de tout les articles</h2>';
-
-		$html .= '<br><a href="'. $moderateCommentUrl .'"> Moderer les commentaires </a>';
-		$html .= '<br><br><a href="' . $addPostUrl . '">Ajouter un article</a>';
-*/
 		$posts = $repository->findAll();
 
-		/*foreach ($posts as $post ) {
-
-			$editPostUrl = $app['url_generator']->generate('edit', ['id' => $post->getId()] );
-			$removePostUrl = $app['url_generator']->generate('remove', ['id' => $post->getId()] );
-			$displayPostByUrl = $app['url_generator']->generate('post', ['id' => $post->getId()] );
-
-			$html .= '<h3><a href="'. $displayPostByUrl .'">'.  $post->getTitle() .'</a></h3>';
-			$html .= '<h5> Dernière modification le '. $post->getDate() .'</h5>';
-			$html .= '<p>'. $post->getContent() .'</p>';
-
-			$html .= '<a href="' . $removePostUrl . '">Supprimer</a><br>';
-			$html .= '<a href="' . $editPostUrl . '">Editer</a>';
-
-		}
-        */
         return new Response($app['twig']->render('Admin.twig', ['articles' => $posts]));
 	}
 
@@ -77,12 +50,6 @@ class PostController{
 		$repository = $entityManager->getRepository('DUT\\Models\\Post');
 
 		$post = $repository->find($id);
-		/*
-		$html = '<h2>Affichage de l\'article #'. $id .'</h2>';
-		$html .= '<h3>#'. $post->getId() .' '. $post->getTitle() .'</h3>';
-		$html .= '<h5>Dernière modification le '. $post->getDate() .'</h5>';
-		$html .= '<p>'. $post->getContent() .'</p>';
-        */
 
 		$commentController = new CommentController();
 		$comment = $commentController->displayAllCommentBy($id, $post, $request, $app);
@@ -142,7 +109,7 @@ class PostController{
             $commentController->deleteAGroupOfComment($id, $app);
         }
 
-        return new Response($app['twig']->render('Admin.twig',['articles' => $post]));
+        return $app->redirect($url);
 	}
 
 	/**
